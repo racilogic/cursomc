@@ -49,6 +49,8 @@ public class Cliente implements Serializable{
 	public void setTipo(TipoCliente tipo) {
 		this.tipo = tipo.getCod();
 	}
+	
+	private List<Pedido> pedidos = new ArrayList<>();
 
 	public Cliente() {
 	}
