@@ -50,6 +50,7 @@ public class Cliente implements Serializable{
 		this.tipo = tipo.getCod();
 	}
 	
+	@OneToMany(mappedBy="cliente")
 	private List<Pedido> pedidos = new ArrayList<>();
 
 	public Cliente() {
