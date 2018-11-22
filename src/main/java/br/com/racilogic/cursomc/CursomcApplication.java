@@ -43,8 +43,6 @@ public class CursomcApplication implements CommandLineRunner {
 	@Autowired
 	private CidadeRepository cidadeRepository;
 	@Autowired
-	private ClienteRepository clienteRepository;
-	@Autowired
 	private EnderecoRepository enderecoRepository;
 	@Autowired
 	private PedidoRepository pedidoRepository;
@@ -52,6 +50,8 @@ public class CursomcApplication implements CommandLineRunner {
 	private PagamentoRepository pagamentoRepository;
 	@Autowired
 	private ItemPedidoRepository itemPedidoRepository;
+	@Autowired
+	private ClienteRepository clienteRepository;
 	
 	
 
@@ -101,7 +101,7 @@ public class CursomcApplication implements CommandLineRunner {
 		clienteRepository.saveAll(Arrays.asList(cli1));
 		enderecoRepository.saveAll(Arrays.asList(e1, e2));
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		
 		Pedido ped1 = new Pedido(null, sdf.parse("30/09/2017 10:32"), cli1, e1);
 		Pedido ped2 = new Pedido(null, sdf.parse("10/10/2017 19:35"), cli1, e2);
